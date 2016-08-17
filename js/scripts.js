@@ -1,8 +1,12 @@
 $(document).ready(function(){
 
   var isLeapYear = function(year){
+    //check if year is divisible by 400. return true
+    if(year % 400 === 0){
+      return true;
+    }
     //check if year is divisible by 100, return false
-    if(year % 100 === 0){
+    else if(year % 100 === 0){
       return false;
     }
     //check if year is divisible by 4, return true
@@ -21,6 +25,6 @@ $(document).ready(function(){
     var year = parseInt($("#userYear").val());
     alert(isLeapYear(year));
 
-    //check if year is divisible by 400. return true
+
   });
 });
