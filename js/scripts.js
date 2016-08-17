@@ -2,15 +2,8 @@ $(document).ready(function(){
 
   var isLeapYear = function(year){
     //check if year is divisible by 400. return true
-    if(year % 400 === 0){
-      return true;
-    }
-    //check if year is divisible by 100, return false
-    else if(year % 100 === 0){
-      return false;
-    }
-    //check if year is divisible by 4, return true
-    else if(year % 4 === 0){
+    //or check if year is divisible by 4 & check if year is not divisible by 100, return true 
+    if(year % 400 === 0 || year % 4 === 0 && year % 100 !== 0) {
       return true;
     }
     //otherwise return false
