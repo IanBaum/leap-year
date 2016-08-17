@@ -1,8 +1,12 @@
 $(document).ready(function(){
 
   var isLeapYear = function(year){
+    //check if year is divisible by 100, return false
+    if(year % 100 === 0){
+      return false;
+    }
     //check if year is divisible by 4, return true
-    if(year % 4 === 0){
+    else if(year % 4 === 0){
       return true;
     }
     //otherwise return false
@@ -16,7 +20,7 @@ $(document).ready(function(){
     // collect user input - year - and convert to integer
     var year = parseInt($("#userYear").val());
     alert(isLeapYear(year));
-    //check if year is divisible by 100, return false
+
     //check if year is divisible by 400. return true
   });
 });
